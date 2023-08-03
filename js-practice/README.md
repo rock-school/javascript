@@ -98,5 +98,8 @@ https://github.com/rolling-scopes-school/tasks/blob/master/tasks/ready-projects/
 Задание 20: Виртуальная клавиатура
 https://github.com/rolling-scopes-school/tasks/blob/master/tasks/ready-projects/virtual-keyboard.md
 
-Задание 21:
+Задание 21: Реализовать каруceль
+Карусель чтобы двигала элементы в лево или право (по кнопкам). Также была возможнеость свайпать на мобильных устройствах. Карусель отличается от слайдера тем, что у слайдера всегда отображается 1 элемент, а карусели их можнео быть несколько
+
+http://kenwheeler.github.io/slick/
 

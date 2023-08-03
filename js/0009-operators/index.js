@@ -32,4 +32,12 @@
 ||	logical or
 !	logical not
 
+
+if else if else
+https://www.codewars.com/kata/571f832f07363d295d001ba8/train/javascript
+
+
+switch case default
+https://www.codewars.com/kata/583c905cb0972b3ad90000ea/train/javascript
+
  */

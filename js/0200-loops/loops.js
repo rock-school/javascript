@@ -27,3 +27,9 @@ func(1, 2, 3, 4)
 // string.length
 // for(let key in string) { } ????
 // for(let key in obj) { }
+
+// https://www.codewars.com/kata/55d24f55d7dd296eb9000030/train/javascript
+// https://www.codewars.com/kata/57241e0f440cd279b5000829/train/javascript
+// https://www.codewars.com/kata/55c28f7304e3eaebef0000da/train/javascript
+// https://www.codewars.com/kata/5721a78c283129e416000999/train/javascript
+// https://medium.com/@andrei_diaconu/javascript-for-loop-exercises-4c6cbf570411

@@ -30,7 +30,6 @@ console.log(testNumber) // 1
 */
 
 /*
-
 МОДИФИЦИРУЮТСЯ передаются по ссылке
 
 const myObject = {
@@ -80,8 +79,6 @@ parseInt('42$sdfsd!') // 42
 parseFloat('42.1') // 42.1
 */
 
-
-
 /*
 BOOLEAN
 
@@ -98,8 +95,7 @@ and
 !!{}
 !!'sdfs'
 !!1213123123
-
- */
+*/
 
 
 

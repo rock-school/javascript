@@ -93,3 +93,42 @@ RAF - Request animation frame
 # Paint -
 - это отрисовка каждого отдельного узла на экране. Момент, когда это происходит впервые, называется first meaningful paint (первая значащая отрисовка). Во время фазы отрисовки или растеризации, браузер конвертирует каждый контейнер box в настоящие пиксели на экране (напомним, что данные контейнеров формируются на этапе layout). Отрисовка подразумевает рисование каждой визуальной частицы элемента на экране (текст, цвета, границы, тени) и рисование заменяемых элементов (картинки, кнопки). Браузер должен выполнять это быстро.
 - background, color,  border-color и т.д.
+
+
+```javascript
+console.log('start');
+
+setTimeout(() => console.log(2));
+
+Promise.resolve().then(() => console.log(3));
+
+Promise.resolve().then(() => setTimeout(() => console.log(4)));
+
+Promise.resolve().then(() => console.log(5));
+
+setTimeout(() => console.log(6));
+
+console.log(7);
+
+console.log('end')
+```
+
+```javascript
+console.log('start');
+
+const promise1 = Promise.resolve().then(() => {
+    console.log('promise1');
+    const timer2 = setTimeout(() => {
+        console.log('timer2')
+    }, 0)
+});
+
+const timer1 = setTimeout(() => {
+    console.log('timer1')
+    const promise2 = Promise.resolve().then(() => {
+        console.log('promise2')
+    })
+}, 0)
+
+console.log('end');
+```

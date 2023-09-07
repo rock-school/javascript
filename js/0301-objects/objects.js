@@ -65,7 +65,6 @@ obj.someGetter //
 
 function someFunction(ob) {
   ob.a = 3;
-
 }
 
 someFunction(obj);

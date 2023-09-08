@@ -18,7 +18,7 @@ const obj = {
 for (var key in obj) {
  console.log(key, obj[key])
 }
- */
+*/
 
 
 const obj = {
@@ -63,13 +63,16 @@ obj.someSetter = 3;
 obj._someSetter // 3
 obj.someGetter //
 
-function someFunction(ob) {
-  ob.a = 3;
+// Передаються по ссылке
+function someFunction(obj) {
+  obj.a = 3;
 }
+
 
 someFunction(obj);
 ob.a // 3
 
+const obj = { };
 
 Object.keys(obj); // ['value', 'testtest', 'etc']
 Object.keys(obj).forEach((key) => {
@@ -88,10 +91,13 @@ Object.entries(obj).forEach((entrie) => {
   console.log(`value`, entrie[1]);
 })
 
+Object.assign(obj, { value: 1 }, { value: 2 }, { test: 3 })
+
 delete obj.obj
 obj.obj // error
 
 
+const obj = {};
 obj.value = 3;
 obj.value // 3
 Object.freeze(obj);
@@ -102,6 +108,21 @@ obj.value // 3
 // empty obj
 const emptyObj = Object.create({});
 emptyObj.__proto__ // empty
+
+String.prototype.newMethod = () => { console.log('sdfs') }
+'sdfs'.newMethod()
+Object.prototype.newObjectMethod = () => { console.log('new method') }
+'sdfs'.newObjectMethod()
+[].newObjectMethod()
+
+
+const customFreeze = (obj) => {
+  Object.keys(obj).forEach((key) => {
+    Object.defineProperty(obj, key, {
+      writable: false,
+    })
+  })
+}
 
 /*
   console.log(Object.hasOwn(object1, 'prop'));

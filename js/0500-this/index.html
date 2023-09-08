@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <button id="click">CLick</button>
+<script>
+  const button = document.getElementById('click');
+  button.addEventListener('click', function() {
+    console.log(this);
+  });
+  button.addEventListener('click', () => {
+    console.log(this);
+  });
+
+  function Item(name, price) {
+    this.name = name;
+    this.price = price;
+    this.description = `${this.name}, ${this.price}€`;
+  }
+
+  function Car(name, price) {
+    this.type = 'Минивен';
+    Item.call(this, name, price);
+    // Здесь вы можете добавить другие поля, специфичные для Car
+  }
+
+  function Fruit(name, price) {
+    this.type = 'Арбуз';
+    this.year = 2018;
+    Item.call(this, name, price);
+    // Здесь вы можете добавить другие поля, специфичные для Fruit
+  }
+
+  const item = new Item('Item', 200);
+  const bmw = new Car("BMW", 120000);
+  const banana = new Fruit("Banana", 1);
+  console.log(item);
+  console.log(bmw);
+  console.log(banana);
+
+  Array.
+</script>
+</body>
+</html>

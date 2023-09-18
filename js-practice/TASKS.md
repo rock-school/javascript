@@ -105,3 +105,77 @@ https://github.com/rolling-scopes-school/tasks/blob/master/tasks/ready-projects/
 
 http://kenwheeler.github.io/slick/
 
+Задача 22: Обратный отсчет времени
+таймер
+
+Задача 23: Приложение погоды
+https://github.com/rolling-scopes-school/tasks/blob/master/tasks/stage-0/fancy-weather.md
+
+Задача 24: Фотофильтр (CSS + JS)
+CSS Variables and JS
+
+Фоторедактор, позволяющий редактировать изображение, применяя к нему различные свойства и фильтры. Третий таск челленджа JavaScript30
+Чему вы научитесь: работать с изображениями, css-фильтрами, css-переменными
+Видео: https://youtu.be/AHLNzv13c2I (13:13)
+Дополнительный материал: Изучите CSS-переменные за 5 минут
+Код: https://github.com/wesbos/JavaScript30/tree/master/03%20-%20CSS%20Variables (9 lines js-code)
+Demo: https://js3003.github.io/
+
+
+Задача 25: Flex Panel Gallery
+
+Слайдер изображений на JavaScript. Пятый таск челленджа JavaScript30
+Чему вы научитесь: создадите слайдер изображений на JavaScript, закрепите знания про флексбоксы
+Видео: https://youtu.be/9eif30i26jg (13:09)
+Код: https://github.com/wesbos/JavaScript30/tree/master/05%20-%20Flex%20Panel%20Gallery (15 lines js-code)
+Demo: https://js3005.github.io/
+
+
+Задача 25: Fun with HTML5 Canvas
+Канвас, на котором можно рисовать линии, толщина и цвет которых изменяются в процессе рисования. Восьмой таск челленджа JavaScript30. Добавьте приложению палитру, в которой можно будет выбрать цвет и толщину линии.
+Чему вы научитесь: создавать приложения с использованием canvas
+Видео: https://youtu.be/8ZGAzJ0drl0 (18:01)
+Код: https://github.com/wesbos/JavaScript30/tree/master/08%20-%20Fun%20with%20HTML5%20Canvas (54 lines js-code)
+Demo: https://canvas30.github.io/
+
+Задача 26: raindrops
+Вам необходимо создать приложение - тренажёр по математике, позволяющий закрепить навыки арифметических действий: сложения, вычитания, умножения и деления.
+
+Условие задачи написано в капле дождя, которая падает с определенной скоростью. Ответ вводится на панели с цифрами. Необходимо успеть ввести ответ до того, как капля упадёт.
+![img.png](img.png)
+
+Видеообзор игры - https://www.youtube.com/watch?v=YDzeM8R4d24
+Demo Для просмотра игры нужно разрешить flash player - https://www.to14.com/game.php?id=4d486a66950d8#
+В оформление игры можно вносить свои изменения с целью его улучшения
+
+Задача 26: Custom Video Player
+Создание кастомного видеоплеера с возможностью добавления пользовательских настроек. Одиннадцатый таск челленджа JavaScript30.
+Чему вы научитесь: усовершенствуете навыки работы с видео
+Видео: https://youtu.be/yx-HYerClEA (24:33)
+Код: https://github.com/wesbos/JavaScript30/tree/master/11%20-%20Custom%20Video%20Player (55 lines js-code)
+Demo: https://js3011.github.io/
+
+Задача 27: Video Speed Controller
+Регулятор скорости воспроизведения видео. Перемещая ползунок, который находится справа от плеера, можно ускорять или замедлять скорость воспроизведение видео. Двадцать восьмой таск челленджа JavaScript30
+Чему вы научитесь: усовершенствуете навыки работы с видео
+Видео: https://youtu.be/8gYN_EDMg_M (9:25)
+Код: https://github.com/wesbos/JavaScript30/tree/master/28%20-%20Video%20Speed%20Controller (16 lines js-code)
+Demo: https://js3028.github.io/
+
+Задача 28: Whack-A-Mole
+Игра на скорость реакции, в которой нужно кликать по целям и зарабатывать баллы. Тридцатый таск челленджа JavaScript30. Дополните игру постепенно усложняющимися уровнями, сохранением результата текущей игры в local storage.
+Чему вы научитесь: создадите игру на JavaScript
+Видео: https://youtu.be/toNFfAaWghU (14:34)
+Код: https://github.com/wesbos/JavaScript30/tree/master/30%20-%20Whack%20A%20Mole (50 lines js-code)
+Demo: https://js3030.github.io/
+
+Задача 29: Chat on socket.io
+Приложение-чат для отправки / получения сообщений в режиме реального времени в котором есть клиентская и серверная часть кода
+Чему вы научитесь: работать с node.js и socket.io
+Туториал: https://medium.com/freecodecamp-russia-русскоязычный/создание-простого-приложения-для-чата-с-помощью-node-js-и-socket-io-eb7498391611
+Код: https://github.com/YKalashnikov/Chat-app-with-node.js-and-socket.io (72+31 lines js-code)
+
+
+Задача 30: Songbird - приложение-викторина для распознавания птиц по их голосам.
+https://github.com/rolling-scopes-school/tasks/blob/master/tasks/songbird/songbird-2022q3.md
+![img_1.png](img_1.png)

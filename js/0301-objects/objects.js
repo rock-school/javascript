@@ -139,3 +139,8 @@ const customFreeze = (obj) => {
 /*
 create, toString, hasOwnProperty, keys, entries, freeze, defineProperty(ies), assign
 */
+
+/*
+https://learn.javascript.ru/object
+https://developer.mozilla.org/ru/docs/Learn/JavaScript/Objects/Basics
+  */

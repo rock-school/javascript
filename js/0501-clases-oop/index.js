@@ -41,3 +41,7 @@ user.plus(2)
 // 4
 user.plus(10);
 // 14
+
+// https://www.youtube.com/watch?v=b55hiUlhAzI
+
+// https://habr.com/ru/companies/otus/articles/685528/

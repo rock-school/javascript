@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+ <script>
+   console.log(test2());
+   //console.log(test3());
+   // console.log(test1);
+
+   const test1 = '1';
+   let test4 = '2';
+
+   var test3 = () => {
+     console.log(this);
+     console.log('111')
+   };
+
+   function test2(arg1, arg2) {
+     this.name = 'petr';
+     this.arg1 = arg1;
+     this.arg2 = arg2;
+
+     test2.prototype.constructor = test2;
+     test2.prototype.getName = function () { };
+     test2.__proto__.constructor = test3;
+   }
+
+   test3();
+   new test2(arg1, arg2);
+ </script>
+</body>
+</html>

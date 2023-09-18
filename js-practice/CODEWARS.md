@@ -115,7 +115,6 @@
 
 ## Objects
 
-* 7 kyu https://www.codewars.com/kata/mylanguages
 * 7 kyu https://www.codewars.com/kata/my-language-skills
 * 6 kyu https://www.codewars.com/kata/run-length-encoding
 * 6 kyu https://www.codewars.com/kata/urban-dictionary

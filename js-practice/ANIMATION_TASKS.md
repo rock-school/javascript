@@ -1,1 +1,12 @@
 1. https://codepen.io/ruslan_khomiak/pen/MbqWaK
+2. https://codepen.io/tutsplus/pen/qBrgxzv
+3. https://codepen.io/jkantner/pen/EdBJxy
+4. https://codepen.io/stanko/pen/pLEYEw
+5. https://codepen.io/mafritz/pen/zKMZLB
+6. https://codepen.io/ilithya/pen/PowwrGB
+7. https://codepen.io/espidesigns/pen/qbRdWB
+8. https://codepen.io/chris22smith/pen/JjjRYKN
+9. https://codepen.io/banik/pen/qMyYmd
+10. https://codepen.io/equinusocio/pen/yLeGZWb
+11. https://codepen.io/ms_yogi/pen/NXYGgv
+12. https://codepen.io/andyNroses/pen/rLRZgY

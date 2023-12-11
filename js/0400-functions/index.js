@@ -13,23 +13,27 @@ function sum(a, b) {
 }
 
 non named (2. Function Expression):
-const ops = function(a, b) {
+const expressionNoNamed = function (a, b) {
   return a + b;
 }
 
-named function expression
-const test1 = function test2(a, b) {
-  // используется для рекурсии позволяет вызвать саму себя внутри функции
+const expressionNamed = function namedFunction (a, b) {
+  return a + b;
+}
+
+const expressionArray = (a, b) => {
   return a + b;
 }
 
 
-IIEF
+IIFE -> https://developer.mozilla.org/en-US/docs/Glossary/IIFE
+
 const a = 1;
 const b = 2;
-(
+(function (a, b) {
   function() { alert(a+b) }
-)()
+}())
+
 
 Функция высшего порядка / фу́нкция обра́тного вы́зова / callback функция
 function(calc, variable) {

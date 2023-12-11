@@ -10,8 +10,9 @@ String.prototype.replaceAll()
 String.prototype.search()
 String.prototype.slice()
 String.prototype.split()
-String.prototype.trim()*/
+String.prototype.trim()
 
+let singleQuotes = 'string';
 console.log(singleQuotes.concat(' another string', ' and another string', ' ...'))
 console.log(singleQuotes.endsWith('g'));
 console.log(singleQuotes.includes('rin')); // st[rin]g
@@ -25,7 +26,7 @@ console.log(singleQuotes.split(''));
 console.log('   strstr   ');
 console.log('   strstr   '.trim())
 
-//// 
+////
 String.prototype.concat()
 String.prototype.endsWith()
 String.prototype.includes()

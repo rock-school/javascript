@@ -27,12 +27,15 @@ str6 // 6
 
 const obj = { prop: 1, proto: 2, test: 3 };
 
+const prop = obj.prop;
+const proto = obj.proto;
+const test = obj.test;
+
 const { prop, proto, test } = obj;
+
 // prop = 1
 // proto = 2
-const prop = obj.prop,
-      proto = obj.proto,
-      test = obj.test;
+// test = 3
 
 
 const array = "Юлий Цезарь Император Рима".split(" "); // ['Юлий', 'Цезарь', 'Император', 'Рима', 'test', undefined]

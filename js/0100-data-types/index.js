@@ -2,10 +2,11 @@
 1. Number // 1, NaN, +Infinity, -Infinity
 2. String // 'string1'
 3. Boolean // true, false
-4. Undefined // undefined 
+4. Undefined // undefined
 5. Null // null
-6. Object // object, function, array, 
+6. Object // object, function, array,
 7. Map // Week, Map, Set
+8. Symbol
 */
 
 /*
@@ -54,11 +55,10 @@ NULL === Object.
 
 null: null,
 undefined: undefined
-Object: Array, Function, Object
+Object: Array, Function, Object, Week, Map, Set
 Number: Infinity, NaN, Symbol, Boolean (0, 1)
 STRING: string
-Boolean: true, false, 
-Map: Week, Map, Set
+Boolean: true, false,
 */
 
 /*

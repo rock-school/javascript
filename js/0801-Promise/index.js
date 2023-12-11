@@ -95,7 +95,8 @@ var p3 = new Promise((resolve, reject) => {
   setTimeout(resolve, 100, "foo");
 });
 
-Promise.all([p1, p2, p3]).then((values) => {
+Promise.all([p1, p2, p3])
+  .then((values) => {
   console.log(values);
 });
 

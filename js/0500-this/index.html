@@ -18,6 +18,44 @@
     console.log(this);
   });
 
+
+  const user = {
+    name: 'Max',
+    hi: function() {
+      console.log('Hello' + this.name)
+    }
+  }
+
+  user.hi2 = function() {
+    console.log('Hello' + this.name)
+  }
+
+  const user2 = {
+    name: 'Max2',
+    hi: function() {
+      console.log('Hello' + this.name)
+    }
+  }
+
+  user.hi();
+  user.hi2();
+  user2.hi();
+
+  // Глобальная this
+  function func() {
+    this.nameThis = 'nameThis';
+    const nameVariable = 'nameVariable';
+    console.log(this)
+  }
+  func(); // WINDOW
+  new func(); // Func this
+
+  class classExample {
+    name = 'classExample'
+  }
+
+  console.log(new classExample());
+
   function Item(name, price) {
     this.name = name;
     this.price = price;
@@ -44,7 +82,7 @@
   console.log(bmw);
   console.log(banana);
 
-  Array.
+
 </script>
 </body>
 </html>

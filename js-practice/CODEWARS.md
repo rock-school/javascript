@@ -325,6 +325,10 @@
 - 7 kyu https://www.codewars.com/kata/who-is-the-killer-1
 - 6 kyu https://www.codewars.com/kata/data-reverse
 
+## Контекст this
+
+- https://www.codewars.com/kata/alternating-case-%3C-equals-%3E-alternating-case/train/javascript
+-
 ## Codewars Advance
 
 - 7 kyu https://www.codewars.com/kata/count-strings-in-objects

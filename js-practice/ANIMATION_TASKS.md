@@ -10,3 +10,7 @@
 10. https://codepen.io/equinusocio/pen/yLeGZWb
 11. https://codepen.io/ms_yogi/pen/NXYGgv
 12. https://codepen.io/andyNroses/pen/rLRZgY
+13. https://codepen.io/louisemoxy/pen/JYwLaJ
+14. https://codepen.io/AllThingsSmitty/pen/zxGyXd
+15. https://codepen.io/patrikhjelm/pen/DZNOpb
+16. https://codepen.io/andyNroses/pen/rLRZgY

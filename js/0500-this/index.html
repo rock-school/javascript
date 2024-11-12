@@ -19,26 +19,26 @@
   });
 
 
-  const user = {
+  const user1 = {
+    name: 'Roman',
+    hi: () => {
+      console.log('Hello' + this.name)
+    }
+  }
+
+  user1.hi2 = function() {
+    console.log('Hello' + this.name)
+  }
+
+  const user2 = {
     name: 'Max',
     hi: function() {
       console.log('Hello' + this.name)
     }
   }
 
-  user.hi2 = function() {
-    console.log('Hello' + this.name)
-  }
-
-  const user2 = {
-    name: 'Max2',
-    hi: function() {
-      console.log('Hello' + this.name)
-    }
-  }
-
-  user.hi();
-  user.hi2();
+  user1.hi();
+  user1.hi2();
   user2.hi();
 
   // Глобальная this
@@ -64,13 +64,14 @@
 
   function Car(name, price) {
     this.type = 'Минивен';
+    this.year = 2018;
     Item.call(this, name, price);
+
     // Здесь вы можете добавить другие поля, специфичные для Car
   }
 
   function Fruit(name, price) {
     this.type = 'Арбуз';
-    this.year = 2018;
     Item.call(this, name, price);
     // Здесь вы можете добавить другие поля, специфичные для Fruit
   }

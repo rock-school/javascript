@@ -1,4 +1,4 @@
-/*
+
 function() {
  console.log(arguments);
  console.log(arguments.length);
@@ -7,12 +7,12 @@ function() {
  const arr = [...arguments];
 }
 
-named (1. Function Declaration):
+// named (1. Function Declaration):
 function sum(a, b) {
   return a + b;
 }
 
-non named (2. Function Expression):
+//  non named (2. Function Expression):
 const expressionNoNamed = function (a, b) {
   return a + b;
 }
@@ -26,7 +26,7 @@ const expressionArray = (a, b) => {
 }
 
 
-IIFE -> https://developer.mozilla.org/en-US/docs/Glossary/IIFE
+// IIFE -> https://developer.mozilla.org/en-US/docs/Glossary/IIFE
 
 const a = 1;
 const b = 2;
@@ -35,12 +35,12 @@ const b = 2;
 }())
 
 
-Функция высшего порядка / фу́нкция обра́тного вы́зова / callback функция
+// Функция высшего порядка / фу́нкция обра́тного вы́зова / callback функция
 function(calc, variable) {
   return calc(variable);
 }
 
-error first функция
+// error first функция
 function(error, variable) {
   if (somethingWrong) {
     error();
@@ -48,7 +48,7 @@ function(error, variable) {
   }
   return variable;
 }
-*/
+
 
 // Рекурсивная функция
 /*function factorial(n) {

@@ -1,23 +1,147 @@
-/*
-ARRAY
 
-const array1 = [1, 2, 3, 4]
-const array2 = new Array(1, 2, 3);
-const array3 = [1, 2, {}, []]
-array3.length === 4;
-
-FUCK UP
-new Array(3) // [undefined, undefined, undefined]
-new Array("3") // ["3']
- */
-/*
 const array = [1, 3, 2];
 const arrayInArray = [ [1, 2], [3, 4] ]
 const objectsInArray = [ { 'prop': 1 }, { 'prop': 2 } ]
 
+let nameOfArray1 = [ 0, 1, 2, 3, 4 ]
+let nameOfArray2 = [ "name", "roman", 'marianna', 3, 4 ]
+
+const value1 = nameOfArray1.at(2);
+const value2 = nameOfArray1[2];
+
+const result = value1 === value2 // true
+
+// Methods of adding
+
+// push, pop, shift, unshift
+// pop - удаляет последний
+// shift - удаляет первый
+// push - добавляет в конец - самый распространный
+// unshift - добавляет в начало
+nameOfArray1.push(5);
+nameOfArray1.push(123123123123123123); // [ 0, 1, 2, 3, 4, 5, 123123123123123123]
+nameOfArray1.pop();  // [ 0, 1, 2, 3, 4, 5]
+
+// AT
+console.log(`Array at [-1]:`, array[- 1])
+console.log(`Array at at(-1):`, array.at(-2));
+
+// Методы перебора
+nameOfArray2 = [ "name", "roman", 'marianna', 3, 4 ];
+
+let friends = []; // [ "name", "marianna" ]
+
+nameOfArray2.forEach((name, index) => {
+    // 1
+    // value = "name"
+    // index = 0
+
+
+    // 2
+    // value = "roman"
+    // index = 1
+
+    if (name === "roman" || name === "marianna") {
+      friends.push(name);
+    }
+});
+
+
+nameOfArray2 = [ "name", "roman", 'marianna', 3, 4 ];
+let findMarianna = nameOfArray2.find((value, index) => {
+
+    // 1
+    // value = "name"
+    // index = 0
+    // false
+
+    // 2
+    // value = "roman"
+    // index = 1
+    // false
+
+
+    // 3
+    // value = "marianna"
+    // index = 2
+    // true
+
+    if (value === "marianna") {
+      return true;
+    }
+    return false;
+});
+// "marianna"
+
+nameOfArray2 = [ "name", "roman", 'marianna', 3, 4 ];
+let namesArray = nameOfArray2.filter((value, index) => {
+
+  // 1
+  // value = "name"
+  // index = 0
+  // true -> namesArray = [ "name" ]
+
+  // 2
+  // value = "roman"
+  // index = 1
+  // true -> namesArray = [ "name",  "roman" ]
+
+
+  // 3
+  // value = "marianna"
+  // index = 2
+  // true -> namesArray = [ "name",  "roman", "marianna" ]
+
+  // 4
+  // value = 3
+  // index = 3
+  // false  -> namesArray = [ "name",  "roman", "marianna" ]
+
+  // 5
+  // value = 4
+  // index = 4
+  // false  -> namesArray = [ "name",  "roman", "marianna" ]
+
+   if (typeof value === "number") {
+     return true;
+   }
+   return false;
+})
+
+
+
+// reverse
+nameOfArray2 = [ "name", "roman", 'marianna', 3, 4 ];
+let reversedArray = nameOfArray2.reverse();
+//  [ 4, 3, "marianna", "roman", "name" ];
+
+
+// map
+nameOfArray2 = [ "name", "roman", 'marianna', 3, 4 ];
+let result = nameOfArray2.map((item, index) => {
+  if (item === 3) {
+    return item * 2
+  }
+  return item;
+}); // [ "name", "roman", 'marianna', 6, 4 ]
+
+// join
+nameOfArray2 = [ "name", "roman", 'marianna', 3, 4 ];
+let resultStr = nameOfArray2.join(" separator ")
+// "name separator roman separator marinanna separator 3 separator 4"
+
+
+// Concat
+nameOfArray1 = [ 0, 1, 2, 3, 4 ];
+nameOfArray2 = [ "name", "roman", 'marianna', 3, 4 ];
+let newArray = nameOfArray2.concat(nameOfArray1)
+// [ "name", "roman", 'marianna', 3, 4, 0, 1, 2, 3, 4  ]
+
+
+// # PART 2
+
+
 // ARRAY METHODS
-array.join(" separator ") // '1 separator 3 separator 2 separator'
-array.reverse(); // [2, 3, 1]
 array.sort((a, b) => {
   if (a > b) {
     return -1;
@@ -27,13 +151,9 @@ array.sort((a, b) => {
     return 0;
   }
 }); // [3, 2, 1]
-array.concat([4,5]) // [1, 3, 2, 4, 5]
+
 array.slice(0, 2); // [1, 3]
 array.splice(0, 1, [5, 5, 5]) // [ [5, 5, 5], 3, 2]
-array.push('test') // [1, 3, 2, 'test']
-array.pop(); // [1, 3]
-array.unshift('test2'); // ['test2', 1, 3, 2]
-array.shift(); // [3, 2]
 
 array1 = [1, 3, 2];
 array1.reduce((saved, item, index, array) => {
@@ -43,91 +163,15 @@ array1.reduce((saved, item, index, array) => {
   return saved + item;
 }, []) // 6
 
-array.find((item, index, array) => item === 3); // 3
-objectsInArray1 = [ { 'prop': 1 }, { 'prop': 2 } ]
-objectsInArray1.find((item) => {
-  const key = 'prop'
-  return item[key];
-}) // { 'prop': 1 }
-
-array.findIndex((item, index, array) => item === 3) // 1
-
-array.filter((item, index, array) => item >= 3) // [3]
-
-objectsInArray1.filter((item) => {
-  const key = 'prop'
-  return item[key];
-}) // [{ 'prop': 1 }, { 'prop': 2 }]
-
 Array.entries(objectsInArray1) // [ [0, { 'prop': 1 }], [ key || index, value] ]
-Array.keys(); // [0, 1, 2]
-Array.values(); // [ ]
-// Array.every()
-Array.includes(2) // true  what else if objects
-Array.map((item, index, array) => item * 2)  // [2, 6, 4]
-array.forEach((item, index, array) => {
-  console.log(item);
-})
-*/
 
-let array = [1, 3, 2];
-const arrayInArray = [
-  [1, 2],
-  [3, 4]
-]
-const objectsInArray = [
-  { 'prop': 1, 'another-prop': 3 },
-  { 'prop': 2 }
-]
-
-
-// AT
-console.log(`Array at [-1]:`, array[- 1])
-console.log(`Array at at(-1):`, array.at(-2));
-
-// Concat
-console.log(`Concat 2 array: `,array.concat(arrayInArray, objectsInArray));
 
 // Every
 console.log(`Every array: `,array.every((item) => item < 10));
 
-// Entries
 
-// Fill
-
-// Filter
-console.log(`Filter array:`, array.filter((item, index, array) => item > 2));
-
-// Find
-console.log(`Find array:`, objectsInArray.find((item, index, array) => item.prop === 1));
-// Array.prototype.findIndex()
-// Array.prototype.findLast()
-// Array.prototype.findLastIndex()
-
-// forEach
-console.log(`ForEach array:`)
-array.forEach((item, index, array) => {
-   console.log(item)
-});
-
-// includes
-console.log(`Includes array with number:`, array.includes(2));
-console.log(`Includes array with object:`, objectsInArray.includes({ prop: 2}));
-
-// join
-console.log(`Join array:`, array.join(''));
-console.log(`Example str: `, 'abcd'.split('').reverse().join(''));
-
-// map
-console.log(`Map array:`, array.map((item, index, array) => {
-  if (item === 3) {
-    return item * 2
-  }
-  return  item;
-}));
 
 // Reduce
-// 1 2 3
 
 console.log('Reduce array: ', array.reduce((acum, item, index, array) => {
   acum = acum + item;
@@ -184,9 +228,16 @@ console.log(`Splice array after: `, array);
 
 // push, pop, shift, unshift
 // pop - удаляет последний
-// push - добавляет
 // shift - удаляет первый
+// push - добавляет в конец - самый распространный
 // unshift - добавляет в начало
+
+
+// splice
+// sort
+// some
+// reverse
+
 
 /*
 Редко но полезно
@@ -197,6 +248,7 @@ Array.prototype.flatMap()
 Array.from()
 Array.fromAsync()
 Array.of()
+
 
 Редко используется
 Array.prototype.copyWithin()

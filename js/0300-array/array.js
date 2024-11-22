@@ -92,11 +92,6 @@ let namesArray = nameOfArray2.filter((value, index) => {
   // index = 2
   // true -> namesArray = [ "name",  "roman", "marianna" ]
 
-  // 4
-  // value = 3
-  // index = 3
-  // false  -> namesArray = [ "name",  "roman", "marianna" ]
-
   // 5
   // value = 4
   // index = 4
@@ -141,8 +136,9 @@ let newArray = nameOfArray2.concat(nameOfArray1)
 // # PART 2
 
 
-// ARRAY METHODS
-array.sort((a, b) => {
+// SORT
+let nameOfArray1 = [ 0, 3, 2, 1, 4 ];
+let result = nameOfArray1.sort((a, b) => {
   if (a > b) {
     return -1;
   } else if (a < b) {
@@ -150,12 +146,24 @@ array.sort((a, b) => {
   } else {
     return 0;
   }
-}); // [3, 2, 1]
+}); // [4, 3, 2, 1, 0]
+
+
+// Every
+let nameOfArray1 = [ 0, 3, 2, 1, 4 ];
+nameOfArray1.every((item) => item < 10);
+
+let nameOfArray1 = [ 0, 3, 2, 1, 4 ];
+nameOfArray1.some((item) => item > 5);
+
+/**
+ * End port 2
+ * **/
+
 
 array.slice(0, 2); // [1, 3]
 array.splice(0, 1, [5, 5, 5]) // [ [5, 5, 5], 3, 2]
 
-array1 = [1, 3, 2];
 array1.reduce((saved, item, index, array) => {
   // 0 + 1 = 1
   // 1 + 3 = 4
@@ -163,68 +171,6 @@ array1.reduce((saved, item, index, array) => {
   return saved + item;
 }, []) // 6
 
-Array.entries(objectsInArray1) // [ [0, { 'prop': 1 }], [ key || index, value] ]
-
-
-// Every
-console.log(`Every array: `,array.every((item) => item < 10));
-
-
-
-// Reduce
-
-console.log('Reduce array: ', array.reduce((acum, item, index, array) => {
-  acum = acum + item;
-  return acum;
-}, 0))
-
-function customReduce(array) {
-  let result = 0;
-  array.forEach((item) => {
-    result = result + item;
-  })
-  return result;
-}
-
-console.log('Reduce array: ', objectsInArray.reduce((acum, item, index, array) => {
-  const keys = Object.keys(item);
-  keys.forEach((key) => {
-    if (!acum[key] || acum[key] < item[key]) {
-      acum[key] = item[key];
-    }
-  })
-  return acum;
-}, { }))
-// Array.prototype.reduceRight()
-
-// reverse
-console.log('WARNING CHANGE BY PLACE!')
-console.log(`Reverse array: `, array.reverse());
-array = [1, 3, 4, 5, 6, 2];
-
-// slice
-console.log(`Slice array: `, array.slice(1, -1));
-
-// some
-console.log(`Some array: `, array.some((item) => item > 5));
-
-// sort
-console.log('WARNING CHANGE BY PLACE!')
-console.log(`Sort array numbers: `, array.sort((a, b) => a - b))
-console.log(`Sort array objects: `, objectsInArray.sort((a, b) => {
-  if (a.prop > b.prop) {
-    return 1;
-  } else if (a.prop < b.prop) {
-    return -1;
-  }
-  return 0
-}))
-array = [1, 3, 4, 5, 6, 2];
-
-// splice
-console.log('WARNING CHANGE BY PLACE!')
-console.log(`Splice array result: `, array.splice(-1, 0, 100))
-console.log(`Splice array after: `, array);
 
 // push, pop, shift, unshift
 // pop - удаляет последний
@@ -241,7 +187,6 @@ console.log(`Splice array after: `, array);
 
 /*
 Редко но полезно
-Array.prototype.entries()
 Array.prototype.fill()
 Array.prototype.flat()
 Array.prototype.flatMap()
@@ -262,4 +207,5 @@ Array.prototype.with()
 Array.prototype.keys()
 Array.prototype.indexOf()
 Array.prototype.lastIndexOf()
+Array.prototype.entries(objectsInArray1) // [ [0, { 'prop': 1 }], [ key || index, value] ]
  */

@@ -20,37 +20,57 @@ for (let key in obj) {
 }
 */
 
-
 const obj = {
   value: 2,
   testtest: 3,
+  testtest1: 1,
+  testtest2: 2,
+  testtest3: 3,
+  testAnohterObj: { },
+
   42: 4,
   'test test': 5,
+
   arr: [1, 2, 3, 4],
   obj: {
     test1: '1',
     test2: '2',
-    test3: '3'
+    test3: '3',
+    obj2: {
+      test11: '4'
+    }
   },
+
   func: function() {
-    this.value // 2
+    this.obj.obj2.test11 // '4'
     this.testtest // 3
   },
+
   arrow: () => {
     this.value // 2
     this.testtest // 3
   },
 
+  /*
   get someGetter() {
     return this.value;
   },
   set someSetter(value) {
     this._someSetter = value;
   }
+*/
 }
 
 obj.value // 2
 obj.testtest // 3
+obj['value'] // 2
+obj['testtest'] // 3
+
+obj.obj.obj2.test11 // '4'
+obj.obj.obj2.test11 = true
+obj.obj.obj2.test11 // true
+
+
 obj.test test // error
 obj['test test'] // 5
 obj.42 // error
@@ -64,15 +84,35 @@ obj._someSetter // 3
 obj.someGetter //
 
 // Передаються по ссылке
-function someFunction(obj) {
+let newObj = {
+  a: 2,
+}
+function someFunction(newObj) {
   obj.a = 3;
 }
+function someFunction2(newObj) {
+  obj.a = 3;
+}
+function someFunction3(newObj) {
+  let copyObj = { ...newObj };
+}
+someFunction();
+newObj.a // 3
 
 
 someFunction(obj);
 ob.a // 3
 
-const obj = { };
+let objA = {
+  a: 1
+};
+let objB = {
+  ...objA
+}
+console.log(objA); // { a: 1 }
+console.log(objB); // { a: 1 }
+console.log(objA === objB); // false
+
 
 Object.keys(obj); // ['value', 'testtest', 'etc']
 Object.keys(obj).forEach((key) => {
@@ -110,10 +150,11 @@ const emptyObj = Object.create({});
 emptyObj.__proto__ // empty
 
 String.prototype.newMethod = () => { console.log('sdfs') }
-'sdfs'.newMethod()
+'sdfs'.newMethod();
+
 Object.prototype.newObjectMethod = () => { console.log('new method') }
-'sdfs'.newObjectMethod()
-[].newObjectMethod()
+'sdfs'.newObjectMethod();
+[].newObjectMethod();
 
 
 const customFreeze = (obj) => {
